@@ -1,4 +1,3 @@
-
 #bountyFilter {
 	font-family: Arial;
 }
@@ -8,47 +7,57 @@
 	margin-left: 5px;
 }
 
-#bountyFilter .options input[type="number"] {
+#bountyFilter > .title {
+	height: auto;
+	min-height: 30px;
+	flex-wrap: wrap;
+	padding-top: 4px;
+	padding-bottom: 4px;
 	box-sizing: border-box;
-	flex: 0 0 48px;
-	width: 48px;
-	min-width: 0;
-	height: 20px;
-	margin: 0 2px;
-	padding: 0 3px;
-	border-radius: 5px;
 }
 
-@media (max-width: 600px) {
-	#bountyFilter > .title {
-		height: auto;
-		min-height: 30px;
-		padding: 6px 10px;
-		box-sizing: border-box;
-		flex-direction: column;
-		align-items: stretch;
-		white-space: normal;
-	}
+#bountyFilter > .title > .text {
+	width: auto;
+	flex: 1;
+}
 
-	#bountyFilter .title .text {
-		width: 100%;
-	}
+#bountyFilter > .title > .options {
+	width: auto;
+	flex: 0 0 auto;
+	display: contents;
+}
 
-	#bountyFilter .title .options {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-end;
-		gap: 5px;
-		margin: 5px 0 0;
-	}
+#bountyFilter > .title > .options > :first-child {
+	order: 1;
+	margin-left: auto;
+}
 
-	#bountyFilter .title .options > * {
-		margin: 0;
-	}
+#bountyFilter > .title > .options > :not(:first-child) {
+	order: 2;
+}
 
-	#bountyFilter .options span,
-	#bountyFilter .options label {
-		font-size: 11px;
-	}
+#bountyFilter > .title > .options > :nth-child(2) {
+	margin-left: auto;
+}
+
+#bountyFilter .options input[type="number"] {
+	box-sizing: border-box;
+	width: 40px;
+	height: 20px;
+	margin: 0 3px;
+	padding: 0 2px;
+	border-radius: 5px;
+	appearance: textfield;
+}
+
+#bountyFilter .options input[type="number"]::-webkit-inner-spin-button,
+#bountyFilter .options input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+#bountyFilter .options span,
+#bountyFilter .options label {
+	font-size: 11px;
+	white-space: nowrap;
 }
