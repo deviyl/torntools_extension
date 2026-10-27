@@ -1,0 +1,24 @@
+name: Build Bounty Filter Test
+
+on:
+  push:
+    branches:
+      - bounty-filter-testing
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+
+      - run: bun install --frozen-lockfile
+
+      - run: bun run build:chrome
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: torntools-test
+          path: .output/chrome-mv3/
