@@ -11,28 +11,28 @@
 #bountyFilter .options {
 	display: flex;
 	align-items: center;
-	flex-wrap: nowrap;
-	gap: 3px;
+	flex-wrap: wrap;
+	gap: 4px;
 }
 
 #bountyFilter .options input[type="number"] {
 	box-sizing: border-box;
-	flex: 0 0 28px;
-	width: 28px;
+	flex: 0 0 45px;
+	width: 45px;
 	min-width: 0;
 	height: 20px;
 	margin: 0;
-	padding: 0 2px;
+	padding: 0 3px;
 	border-radius: 5px;
-	transition: flex-basis 0.2s ease, width 0.2s ease;
 }
 
-#bountyFilter .options input[type="number"]:focus {
-	flex-basis: 48px;
-	width: 48px;
+#bountyFilter .options > :first-child {
+	order: 1;
+	flex-basis: 100%;
 }
 
-#bountyFilter .options span {
+#bountyFilter .options span,
+#bountyFilter .options label {
 	white-space: nowrap;
 	font-size: 11px;
 }
