@@ -8,31 +8,47 @@
 	margin-left: 5px;
 }
 
-#bountyFilter .options {
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-	gap: 4px;
-}
-
 #bountyFilter .options input[type="number"] {
 	box-sizing: border-box;
-	flex: 0 0 45px;
-	width: 45px;
+	flex: 0 0 48px;
+	width: 48px;
 	min-width: 0;
 	height: 20px;
-	margin: 0;
+	margin: 0 2px;
 	padding: 0 3px;
 	border-radius: 5px;
 }
 
-#bountyFilter .options > :first-child {
-	order: 1;
-	flex-basis: 100%;
-}
+@media (max-width: 600px) {
+	#bountyFilter > .title {
+		height: auto;
+		min-height: 30px;
+		padding: 6px 10px;
+		box-sizing: border-box;
+		flex-direction: column;
+		align-items: stretch;
+		white-space: normal;
+	}
 
-#bountyFilter .options span,
-#bountyFilter .options label {
-	white-space: nowrap;
-	font-size: 11px;
+	#bountyFilter .title .text {
+		width: 100%;
+	}
+
+	#bountyFilter .title .options {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		gap: 5px;
+		margin: 5px 0 0;
+	}
+
+	#bountyFilter .title .options > * {
+		margin: 0;
+	}
+
+	#bountyFilter .options span,
+	#bountyFilter .options label {
+		font-size: 11px;
+	}
 }
