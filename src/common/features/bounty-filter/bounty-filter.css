@@ -63,3 +63,9 @@
 	font-size: 11px;
 	white-space: nowrap;
 }
+
+@media (max-width: 600px) {
+	#bountyFilter .text .statistics {
+		display: none;
+	}
+}
